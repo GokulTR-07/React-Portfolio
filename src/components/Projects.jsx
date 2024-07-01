@@ -14,19 +14,19 @@ function Projects() {
         className='my-20 text-center text-4xl'>Projects
         </motion.h2>
         <div>
-          <div className="mb-8 flex flex-wrap lg:justify-center">
+          <div className="mb-8 flex flex-wrap lg:justify-center md:justify-center">
             <motion.div 
             whileInView={{opacity: 1, x: 0}}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1 }}
-            className="w-full lg:w-1/4 flex lg:items-center">
+            className="w-full lg:w-1/4 flex lg:items-center md:justify-center">
               <img src={BikersGarage} alt="" width={300} height={200} className='mb-6 rounded'/>
             </motion.div>
             <motion.div 
             whileInView={{opacity: 1, x: 0}}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
-            className="w-full max-w-xl lg:w-3/4 lg:ml-8">
+            className="w-full max-w-xl lg:w-3/4 lg:ml-8 ">
                <h6 className='lg:ml-4 font-semibold text-lg text-white rounded bg-red-500 text-center'>Bikers Garage</h6>
                <div className='lg:ml-4 mt-4'>
                 <p className='font-medium pb-2 text-slate-400'>KEY FEATURES :</p>
@@ -61,12 +61,12 @@ function Projects() {
         </div>
 
         <div>
-          <div className="mb-8 flex flex-wrap lg:justify-center">
+          <div className="mb-8 flex flex-wrap lg:justify-center md:justify-center">
             <motion.div 
             whileInView={{opacity: 1, x: 0}}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1.5 }}
-            className="w-full lg:w-1/4 flex lg:items-center">
+            className="w-full lg:w-1/4 flex lg:items-center md:justify-center">
               <img src={BookMyDen} alt="" width={300} height={200} className='mb-6 rounded'/>
             </motion.div>
             <motion.div 

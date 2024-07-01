@@ -85,7 +85,7 @@ function Certification() {
       transition={{ duration: 1.2 }}
       className='my-20 text-center text-4xl'>Certifications
       </motion.h2>
-      <div className='flex flex-wrap lg:justify-center gap-14'>
+      <div className='flex flex-wrap lg:justify-center md:justify-center gap-14'>
         <motion.div 
         whileInView={{opacity: 1, x: 0}}
         initial={{ opacity: 0, x: -100 }}

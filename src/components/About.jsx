@@ -24,7 +24,7 @@ function About() {
             <Lottie animationData={Dev} />
           </motion.div>
         </div>
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2 md:pl-14">
           <motion.div 
           whileInView={{opacity: 1, x: 0}}
           initial={{ opacity: 0, x: 100 }}

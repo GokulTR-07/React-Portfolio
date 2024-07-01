@@ -14,10 +14,7 @@ function Contact() {
       >
         Contact <span className="text-lime-400 font-medium">Me</span>
       </motion.h2>
-      <motion.div 
-      whileInView={{opacity: 1, y: 0}}
-      initial={{ opacity: 0, y: 100 }}
-      transition={{ duration: 1.5 }}
+      <div
       className="text-center tracking-tighter space-y-1">
         <motion.p 
         whileInView={{opacity: 1, x: 0}}
@@ -31,13 +28,10 @@ function Contact() {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 1 }}
         className="">Ph.No : 9962467753</motion.p>
-        <motion.a 
-        whileInView={{opacity: 1, x: 0}}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 1 }}
+        <a 
         href="mailto: gokultr1206@gmail.com" target="_blank">
           gokultr1206@gmail.com
-        </motion.a>
+        </a>
         <motion.div 
         whileInView={{opacity: 1, x: 0}}
         initial={{ opacity: 0, x: 100 }}
@@ -50,7 +44,7 @@ function Contact() {
             <BsGithub size={20} />
           </a>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   );
 }
