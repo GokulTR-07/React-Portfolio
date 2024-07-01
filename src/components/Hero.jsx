@@ -1,20 +1,41 @@
 import React from "react";
 import Webdev from "../assets/Webdev.json";
 import Lottie from "lottie-react";
+import {motion} from "framer-motion"
 
 function Hero() {
+  const container = (delay) => ({
+    hidden: { x: -100, opacity: 0},
+    visible:{
+      x:0,
+      opacity: 1,
+      transition: { duration: 0.5, delay: delay},
+    },
+  })
   return (
     <div className="border-b border-lime-900 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
-            <h1 className="pb-14 text-6xl font-thin tracking-wider lg:mt-16 lg:text-7xl">
+            <motion.h1 
+            variants={container(0)}
+            initial="hidden"
+            animate="visible"
+            className="pb-14 text-6xl font-thin tracking-wider lg:mt-16 lg:text-7xl">
               Gokul T
-            </h1>
-            <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-wide text-transparent">
+            </motion.h1>
+            <motion.span 
+            variants={container(0.5)}
+            initial="hidden"
+            animate="visible"
+            className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-wide text-transparent">
               Full Stack Developer
-            </span>
-            <p className="my-4 max-w-xl py-6 font-light tracking-tighter">
+            </motion.span>
+            <motion.p 
+            variants={container(0.8)}
+            initial="hidden"
+            animate="visible"
+            className="my-4 max-w-xl py-6 font-light tracking-tighter">
               I'm a passionate MERN stack developer with a knack for building
               dynamic and responsive web applications. With expertise in
               MongoDB, Express.js, React.js, and Node.js, I craft seamless user
@@ -23,17 +44,25 @@ function Hero() {
               Welcome to my portfolio, where you can explore my diverse projects
               and learn more about my journey and growth in the world of web
               development.
-            </p>
-            <a href="https://drive.google.com/file/d/1X_oh5Hp4b0sQ4Y4AZvSvzya3o9v04fj9/view?usp=drive_link" target="_blank" className="hover:bg-lime-500 hover:text-black shadow-2xl shadow-lime-200 hover:shadow-lime-300 hover:shadow-xl rounded">
+            </motion.p>
+            <motion.a 
+            variants={container(1)}
+            initial="hidden"
+            animate="visible"
+            href="https://drive.google.com/file/d/1X_oh5Hp4b0sQ4Y4AZvSvzya3o9v04fj9/view?usp=drive_link" target="_blank" className="hover:bg-lime-500 hover:text-black shadow-2xl shadow-lime-200 hover:shadow-lime-300 hover:shadow-xl rounded">
               <button className="border py-2 px-5 rounded font-medium">Click to view Resume</button>
-            </a>
+            </motion.a>
           </div>
         </div>
 
         <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex justify-center">
+          <motion.div 
+          initial={{ x: 100, opacity: 0}}
+          animate={{ x: 0, opacity: 1}}
+          transition={{duration: 1, delay: 1.2}}
+          className="flex justify-center">
             <Lottie animationData={Webdev} />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>

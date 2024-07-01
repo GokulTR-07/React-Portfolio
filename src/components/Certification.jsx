@@ -9,6 +9,7 @@ import Certificate6 from "../assets/Certificate6.png"
 import Certificate7 from "../assets/Certificate7.png"
 import Certificate8 from "../assets/Certificate8.png"
 import Certificate9 from "../assets/Certificate9.png"
+import { motion } from 'framer-motion';
 
 function Certification() {
   const theme = {
@@ -78,9 +79,18 @@ function Certification() {
   };
   return (
     <div className='border-b border-lime-900 pb-24' id='certifications'>
-      <h2 className='my-20 text-center text-4xl'>Certifications</h2>
+      <motion.h2 
+      whileInView={{opacity: 1, y: 0}}
+      initial={{ opacity: 0, y: -100 }}
+      transition={{ duration: 1.2 }}
+      className='my-20 text-center text-4xl'>Certifications
+      </motion.h2>
       <div className='flex flex-wrap lg:justify-center gap-14'>
-        <div className='w-full max-w-xl lg:w-1/2'>
+        <motion.div 
+        whileInView={{opacity: 1, x: 0}}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1.5 }}
+        className='w-full max-w-xl lg:w-1/2'>
           <Carousel
             className="rounded-xl"
             prevArrow={({ handlePrev }) => (
@@ -178,9 +188,12 @@ function Certification() {
               className="h-full w-full object-cover"
             />
           </Carousel>
-        </div>
+        </motion.div>
         
-        <div className=''>
+        <motion.div 
+        whileInView={{opacity: 1, x: 0}}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 2 }}>
           <h4 className='text-slate-400 font-medium'>Full Stack Web Development Course from <span className='text-lime-400'>GUVI</span> :</h4>
           <br />
           
@@ -195,7 +208,7 @@ function Certification() {
           <br />
           • <span className='text-lime-400'>Topics Covered :</span>  HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB, etc.
           </p>
-        </div>
+        </motion.div>
       </div>
       
     </div>

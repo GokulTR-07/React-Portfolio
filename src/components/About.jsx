@@ -1,22 +1,35 @@
 import React from "react";
 import Lottie from 'lottie-react';
 import Dev from '../assets/Dev.json'
+import {motion} from "framer-motion";
 
 function About() {
   return (
     <div className="border-b border-lime-900 pb-4" id="about">
-      <h2 className="my-20 text-center text-4xl">
+      <motion.h2 
+      whileInView={{opacity: 1, y: 0}}
+      initial={{ opacity: 0, y: -100 }}
+      transition={{ duration: 1.5 }}
+      className="my-20 text-center text-4xl">
         About <span className="text-lime-300 font-medium">Me</span>
-      </h2>
+      </motion.h2>
 
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex items-center justify-center">
+          <motion.div
+          whileInView={{opacity: 1, x: 0}}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          className="flex items-center justify-center">
             <Lottie animationData={Dev} />
-          </div>
+          </motion.div>
         </div>
         <div className="w-full lg:w-1/2">
-          <div className="flex flex-col justify-center lg:justify-start gap-4 my-2 max-w-xl py-6">
+          <motion.div 
+          whileInView={{opacity: 1, x: 0}}
+          initial={{ opacity: 0, x: 100 }}
+          transition={{ duration: 1 }}
+          className="flex flex-col justify-center items-center gap-4 my-2 max-w-xl py-6">
             <p className="">
               Hello! I'm Gokul, a dedicated MERN stack developer with a passion
               for creating dynamic, efficient, and user-friendly web
@@ -45,7 +58,7 @@ function About() {
               Thank you for visiting my portfolio. I look forward to connecting
               and potentially collaborating on exciting projects!
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
