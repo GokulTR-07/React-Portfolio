@@ -26,8 +26,14 @@ function Projects() {
             whileInView={{opacity: 1, x: 0}}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1.5 }}
-            className="w-full max-w-xl lg:w-3/4 lg:ml-8 ">
-               <h6 className='lg:ml-4 font-semibold text-lg text-white rounded bg-red-500 text-center'>Bikers Garage</h6>
+            className="w-full max-w-xl lg:w-3/4 lg:ml-8" >
+              <div>
+                <h6 className='lg:ml-4 font-semibold text-lg text-white rounded bg-red-500 text-center'>Bikers Garage
+                  <span className='font-light pl-5 text-sm'><a href="https://bike-service-booking-frontend.vercel.app/" target='_blank'>[Live Link]</a></span>
+                </h6>
+                
+              </div>
+               
                <div className='lg:ml-4 mt-4'>
                 <p className='font-medium pb-2 text-slate-400'>KEY FEATURES :</p>
 
